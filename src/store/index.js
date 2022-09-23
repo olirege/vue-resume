@@ -53,7 +53,7 @@ const store = createStore({
           },
           second: {
             title: {
-              t: "Systeme Progiciel de gestion intégré(ERP)",
+              t: "Systeme Logiciel de gestion intégré(ERP)",
               d: "Juillet 2021 - Sept 2021",
             },
             paragraph: [
