@@ -17,7 +17,7 @@ const store = createStore({
             "Ce que je vais vous apporter, c'est une éthique de travail implacable, une passion pour l'apprentissage et un désir de créer le meilleur produit possible.",
           ],
         },
-        homeTitle: "Techonologue en Génie Industriel",
+        homeTitle: "Technologue en Génie Industriel",
         workTitle: "Experience Récente",
         work: {
           first: {
