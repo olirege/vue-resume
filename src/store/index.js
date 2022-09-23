@@ -81,7 +81,7 @@ const store = createStore({
           second: {
             title: {
               t: "SSGI Six Sigma Global Institue, Boston",
-              d: "2021",
+              d: "2021 - 2021",
             },
             paragraph: [
               {
