@@ -1,0 +1,168 @@
+
+<template>
+  <div class="greetings">
+    <Transition appear @before-enter="beforeEnter" @enter="onEnter">
+      <h1>
+        <div class="name">{{ msg }}</div>
+      </h1>
+    </Transition>
+    <h4 class="detail">
+      <h3>
+        <span>{{ text.homeTitle }}</span>
+      </h3>
+      <span><BIconTelephoneFill /> {{ cell }}</span>
+      <span><BIconEnvelopeFill /> {{ email }}</span>
+      <span><BIconLinkedin /> <a :href='linkedin.url'>{{linkedin.name}}</a> </span>
+    </h4>
+    <SlideLeftTransition>
+      <span class="skills">
+        <DjangoIcon />
+        <DockerIcon />
+        <PythonIcon />
+        <JavascriptIcon />
+        <PostgresqlIcon />
+        <PytorchIcon />
+      </span>
+    </SlideLeftTransition>
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+    </nav>
+  </div>
+</template>
+<script>
+import DjangoIcon from "./icons/IconDjango.vue";
+import DockerIcon from "./icons/IconDocker.vue";
+import PythonIcon from "./icons/IconPython.vue";
+import JavascriptIcon from "./icons/IconJavascript.vue";
+import PostgresqlIcon from "./icons/IconPostgresql.vue";
+import PytorchIcon from "./icons/IconPytorch.vue";
+import { computed } from "vue";
+import { useStore } from "vuex";
+import { gsap } from "gsap";
+import { BIconTelephoneFill, BIconEnvelopeFill,BIconLinkedin } from "bootstrap-icons-vue";
+import SlideLeftTransition from "./transitions/SlideLeftTransition.vue";
+
+export default {
+  components: {
+    DjangoIcon,
+    DockerIcon,
+    PythonIcon,
+    JavascriptIcon,
+    PostgresqlIcon,
+    PytorchIcon,
+    BIconTelephoneFill,
+    BIconEnvelopeFill,
+    BIconLinkedin,
+    SlideLeftTransition
+  },
+
+  setup() {
+    const store = useStore();
+    const text = computed(() => store.getters["getText"]);
+    const msg = "Olivier R. Côté";
+    const cell = "+1(438)-827-3126";
+    const email = "olirc1989@hotmail.com";
+    const linkedin = {name: "LinkedIn", url: "https://www.linkedin.com/in/olivier-r%C3%A9gimbal-41021a231/"}
+    function beforeEnter() {}
+
+    function onEnter(el, done) {
+      gsap.to(".name", {
+        color: "yellow",
+        opacity: 1,
+        height: 40,
+        duration: 1.3,
+        onComplete: done,
+      });
+    }
+    return {
+      text,
+      beforeEnter,
+      onEnter,
+      msg,
+      cell,
+      email,
+      linkedin
+    };
+  },
+};
+</script>
+  
+<style scoped>
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  top: -10px;
+  opacity: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+h4 {
+  font-size: 1rem;
+}
+.skills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+@media (min-width: 1024px) {
+  .name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    height: 0;
+  }
+  .greetings h1,
+  .greetings h3 {
+    text-align: left;
+  }
+  
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}
+
+</style>
