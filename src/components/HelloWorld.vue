@@ -97,15 +97,20 @@ export default {
 .detail {
   display: flex;
   flex-direction: column;
+  color: var(--color-heading);
   row-gap:3px;
   top: -10px;
   opacity: 1;
 }
 
-.profiles{
+.profiles ,
+.skills {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  text-align:left;
+  justify-content: flex-start;
+  align-items: center;
+  gap:0.4rem;
   width: 100%;
 }
 h1 {
@@ -119,12 +124,6 @@ h3 {
 }
 h4 {
   font-size: 1rem;
-}
-.skills {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }
 
 nav {
@@ -173,6 +172,9 @@ nav a:first-of-type {
 
     padding: 1rem 0;
     margin-top: 1rem;
+  }
+  .profiles{
+    justify-content: space-between;
   }
 }
 

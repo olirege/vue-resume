@@ -1,11 +1,5 @@
 <template>
-  <TransitionGroup appear @enter="onEnter" tag="div" class="tr_div">
-    <div key="1" class="deco1"></div>
-    <div key="2" class="deco2"></div>
-    <div key="3" class="deco3"></div>
-    <div key="4" class="deco4"></div>
-    <div key="5" class="deco5"></div>
-  </TransitionGroup>
+  <BackgroundTransition />
   <header>
     <button @click="switchLANG">{{ currentLANG }}</button>
     <Profile />
@@ -21,8 +15,9 @@ import { RouterLink, RouterView } from "vue-router";
 import { useStore } from "vuex";
 import { computed } from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import BackgroundAnimation from "./components/transitions/BackgroundTransition.vue";
 import Profile from "./components/Profile.vue";
-import { gsap } from "gsap";
+import BackgroundTransition from "./components/transitions/BackgroundTransition.vue";
 
 export default {
   components: {
@@ -30,7 +25,9 @@ export default {
     RouterLink,
     RouterView,
     Profile,
-  },
+    BackgroundAnimation,
+    BackgroundTransition
+},
   setup() {
     const store = useStore();
     store.dispatch("setLANG", "en");
@@ -42,50 +39,8 @@ export default {
         store.dispatch("setLANG", "en");
       }
     };
-    function onEnter(el, done) {
-      gsap.to(".deco1", {
-        duration: 1,
-        height: "100%",
-        onComplete: () => {
-          gsap.to(".deco1", {
-            duration: 1,
-            width: 200,
-            onComplete: done,
-          });
-        },
-      });
-      gsap.to(".deco2", {
-        duration: 1,
-        height: 0,
-        onComplete: done,
-      });
-      gsap.to(".deco3", {
-        duration: 1,
-        height: "75%",
-        delay: 1.5,
-        onComplete: done,
-      });
-      gsap.to(".deco4", {
-        duration: 1,
-        delay: 1.5,
-        height:380,
-        onComplete: done,
-      });
-      gsap.to(".deco5", {
-        duration: 0.4,
-        right: 0,
-        delay: 0.1,
-        onComplete: () => {
-          gsap.to(".deco5", {
-            duration: 1.3,
-            x: "-100%",
-          });
-        },
-      });
-    }
     return {
       currentLANG,
-      onEnter,
       switchLANG,
     };
   },
@@ -93,18 +48,6 @@ export default {
 </script>
   
 <style scoped>
-.deco4{
-  position: fixed;
-}
-.deco5 {
-  background-color: orange;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
 
 header {
   line-height: 1.5;
@@ -114,8 +57,8 @@ header {
 
 button {
   position: fixed;
-  top: 2%;
-  right: 2%;
+  top: 5%;
+  right: 5%;
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
@@ -123,47 +66,6 @@ button {
   background-color: transparent;
 }
 @media (min-width: 1024px) {
-  .tr_div {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  .deco1 {
-    background-color: yellow;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 10rem;
-    height: 0;
-    z-index: 2;
-  }
-  .deco2 {
-    background-color: yellow;
-    position: fixed;
-    top: 0;
-    left: 10rem;
-    width: 10rem;
-    height: 100%;
-    z-index: 2;
-  }
-  .deco3 {
-    background-color: orange;
-    position: fixed;
-    top: 0;
-    left: 20rem;
-    width: 10rem;
-    height: 0;
-    z-index: 2;
-  }
-  .deco4 {
-    background-color: yellow;
-    position: fixed;
-    bottom: 0;
-    left: 25rem;
-    width: 10rem;
-    height: 0;
-    z-index: 2;
-  }
   .deco5 {
     background-color: orange;
     position: fixed;
@@ -188,6 +90,11 @@ button {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+  }
+  button {
+    position: fixed;
+    top: 2%;
+    right: 2%;
   }
 
 }

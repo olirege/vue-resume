@@ -19,7 +19,7 @@ const store = createStore({
           ],
         },
         homeTitle: "Techonologue en Génie Industriel",
-        workTitle: "Experience",
+        workTitle: "Experience Récente",
         work: {
           first: {
             title: {
@@ -28,11 +28,11 @@ const store = createStore({
             },
             paragraph: [
               {
-                t: "Détection et reconnaissance de produit par procédé de Vision Numérique.",
+                t: "Rechercher et proposer des solutions pour mettre en place un processus de détection et de reconnaissance des produits en caisses entrant dans l'entrepôt sur un tapis roulant. J'ai conçu le système et programmé le back-end en python et Ladder Logic.",
                 c: null,
               },
               {
-                t: "Optimisation de procédé de détection de pucerons",
+                t: "Offert une solution alternative pour identifier les pucerons sur les laitues en utilisant une caméra et un réseau de neurones. Ensuite, une carte thermique est générée pour identifier l'emplacement des pucerons.",
                 c: "aphids_1.jpg",
               },
             ],
@@ -47,19 +47,19 @@ const store = createStore({
             },
             paragraph: [
               {
-                t: "Design de l'architecture et programmation de la plateforme",
+                t: "Conception de l'architecture logicielle d'une plate-forme qui sera utilisée pour annoter des images pour un processus de vision par ordinateur. J'ai utilisé Vue.js, Pixi.js, Django, Postgresl, Yolov5 et Docker.",
                 c: "annotater.mp4",
               },
             ],
           },
           second: {
             title: {
-              t: "Systeme Progiciel de gestion intégré(PGI)",
+              t: "Systeme Progiciel de gestion intégré(ERP)",
               d: "Juillet 2021 - Sept 2021",
             },
             paragraph: [
               {
-                t: "Design du système,des modules et programmation back-end",
+                t: "Conception de l'architecture logicielle d'un système ERP. J'ai utilisé principalement PYQT5, Postgresl et Docker. J'ai recherché et implémenté un moyen de générer des rapports en utilisant les données de la base de données.",
                 c: null,
               },
             ],
@@ -175,7 +175,7 @@ const store = createStore({
         "I am a creative thinker and I am always ready to find new ways to solve problems.",
         ] },
         homeTitle: "Industrial Engineering Technologist",
-        workTitle: "Experience",
+        workTitle: " Recent Experience",
         work: {
           first: {
             title: {
@@ -184,11 +184,11 @@ const store = createStore({
             },
             paragraph: [
               {
-                t: "Architecture design of a Product Detection and Recognition by Computer Vision process",
+                t: "Research and purpose solutions to implement a process to detect and recognize products in crates coming into the warehouse on a conveyor belt. I designed the system, and programmed the back-end in python and Ladder Logic.",
                 c: null,
               },
               {
-                t: "Optimization of a 'Search and Destroy' Pests Detection Process",
+                t: "Offered an alternative solution to identify Aphids on lettuces by using a camera and a neural network.Then, a heat map is generated to identify the location of the aphids.",
                 c: "aphids_1.jpg",
               },
             ],
@@ -203,7 +203,7 @@ const store = createStore({
             },
             paragraph: [
               {
-                t: "Software architecture design and fullstack programming in JS and Python",
+                t: "Designed the software architecture for a platform that will be used to annotate images for a computer vision process. I used Vue.js, Pixi.js, Django, Postgresl, Yolov5 and Docker.",
                 c: "annotater.mp4",
               },
             ],
@@ -215,7 +215,7 @@ const store = createStore({
             },
             paragraph: [
               {
-                t: "System and modules design, with fullstack programming in python",
+                t: "Designed the software architecture for an ERP system. I used mainly PYQT5, Postgresl and Docker. I researched and implemented a way to generate reports using the data from the database.",
                 c: null,
               },
             ],

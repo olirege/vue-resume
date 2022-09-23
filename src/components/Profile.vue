@@ -69,24 +69,25 @@ export default {
   margin-right: 1rem;
 }
 .image-container {
-  margin-left:30%;
   width: 100%;
   height: 0;
   overflow: hidden;
 }
 .profile-logo {
-  display: block;
-  opacity:1;
+  position: absolute;
+  left: 30%;
+  opacity: 1;
   width: 125px;
   border-radius: 50%;
 }
 .flip-logo {
-    margin-left:30%;
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    background-color: yellow;
-  }
+  position: absolute;
+  left: 30%;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-color: yellow;
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -100,9 +101,11 @@ export default {
     margin-left: 0;
   }
   .flip-logo {
+    position:static;
     margin-left: 0;
   }
-  .profile-logo{
+  .profile-logo {
+    position:static;
     margin: 0 auto 2rem;
   }
 }
