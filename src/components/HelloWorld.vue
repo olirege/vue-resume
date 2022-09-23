@@ -12,7 +12,8 @@
       </h3>
       <span><BIconTelephoneFill /> {{ cell }}</span>
       <span><BIconEnvelopeFill /> {{ email }}</span>
-      <span><BIconLinkedin /> <a :href='linkedin.url'>{{linkedin.name}}</a> </span>
+      <span class="profiles"><BIconLinkedin /> <a :href='linkedin.url'>{{linkedin.name}}</a>
+      <BIconGithub /> <a :href='github.url'>{{github.name}}</a> </span>
     </h4>
     <SlideLeftTransition>
       <span class="skills">
@@ -40,7 +41,7 @@ import PytorchIcon from "./icons/IconPytorch.vue";
 import { computed } from "vue";
 import { useStore } from "vuex";
 import { gsap } from "gsap";
-import { BIconTelephoneFill, BIconEnvelopeFill,BIconLinkedin } from "bootstrap-icons-vue";
+import { BIconTelephoneFill, BIconEnvelopeFill,BIconLinkedin,BIconGithub } from "bootstrap-icons-vue";
 import SlideLeftTransition from "./transitions/SlideLeftTransition.vue";
 
 export default {
@@ -53,6 +54,7 @@ export default {
     PytorchIcon,
     BIconTelephoneFill,
     BIconEnvelopeFill,
+    BIconGithub,
     BIconLinkedin,
     SlideLeftTransition
   },
@@ -63,7 +65,9 @@ export default {
     const msg = "Olivier R. Côté";
     const cell = "+1(438)-827-3126";
     const email = "olirc1989@hotmail.com";
-    const linkedin = {name: "LinkedIn", url: "https://www.linkedin.com/in/olivier-r%C3%A9gimbal-41021a231/"}
+    const linkedin = {name: "LinkedIn Profile", url: "https://www.linkedin.com/in/olivier-r%C3%A9gimbal-41021a231/"}
+    const github = {name: "Github Profile", url: "https://github.com/olirege/vue-resume"}
+
     function beforeEnter() {}
 
     function onEnter(el, done) {
@@ -82,21 +86,28 @@ export default {
       msg,
       cell,
       email,
-      linkedin
+      linkedin,
+      github,
     };
   },
 };
 </script>
   
 <style scoped>
-
 .detail {
   display: flex;
   flex-direction: column;
+  row-gap:3px;
   top: -10px;
   opacity: 1;
 }
 
+.profiles{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
 h1 {
   font-size: 2.5rem;
   text-align: left;

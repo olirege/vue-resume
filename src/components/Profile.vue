@@ -69,6 +69,7 @@ export default {
   margin-right: 1rem;
 }
 .image-container {
+  margin-left:30%;
   width: 100%;
   height: 0;
   overflow: hidden;
@@ -76,10 +77,16 @@ export default {
 .profile-logo {
   display: block;
   opacity:1;
-  margin: 0 auto 2rem;
   width: 125px;
   border-radius: 50%;
 }
+.flip-logo {
+    margin-left:30%;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: yellow;
+  }
 .overlay {
   position: absolute;
   top: 0;
@@ -89,11 +96,14 @@ export default {
   overflow: hidden;
 }
 @media (min-width: 1024px) {
+  .image-container {
+    margin-left: 0;
+  }
   .flip-logo {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    background-color: yellow;
+    margin-left: 0;
+  }
+  .profile-logo{
+    margin: 0 auto 2rem;
   }
 }
 </style>
