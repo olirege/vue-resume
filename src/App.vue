@@ -67,9 +67,8 @@ export default {
       });
       gsap.to(".deco4", {
         duration: 1,
-        bottom: 0,
         delay: 1.5,
-        height:"22rem",
+        height:380,
         onComplete: done,
       });
       gsap.to(".deco5", {
@@ -94,6 +93,9 @@ export default {
 </script>
   
 <style scoped>
+.deco4{
+  position: fixed;
+}
 .deco5 {
   background-color: orange;
   position: fixed;
