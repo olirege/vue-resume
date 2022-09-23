@@ -174,7 +174,7 @@ ul li{
 }
 
 
-@media(min-width: 1024px){
+@media(min-width: 1300px){
   h3 {
     font-size: 1.2rem;
   }

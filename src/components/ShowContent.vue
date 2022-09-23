@@ -7,7 +7,9 @@
     <div class='dialog'>
         <button class='btn' @click="$emit('close')">X</button>
         <div class="content" v-if="content">
-            <img v-if="content.includes('.gif')" src="@/assets/annotater.gif">
+            <video v-if="content.includes('.mp4')" controls muted loop>
+             <source src="@/assets/annotater.mp4" type="video/mp4"/>
+            </video>
             <img v-else-if ="content.includes('.jpg')" src="@/assets/aphids_2.jpg" />
         </div>
     </div>
@@ -73,6 +75,10 @@ img{
     max-width: 100%;
     max-height: 100%;
 }
+video{
+    max-width: 100%;
+    max-height: 100%;
+}
 .btn{
         position: absolute;
         top: 1.25%;
@@ -91,6 +97,10 @@ img{
         
     }
     img{
+        max-width: 600px;
+        max-height: 600px;
+    }
+    video{
         max-width: 600px;
         max-height: 600px;
     }

@@ -48,7 +48,7 @@ const store = createStore({
             paragraph: [
               {
                 t: "Design de l'architecture et programmation de la plateforme",
-                c: "annotater.gif",
+                c: "annotater.mp4",
               },
             ],
           },
@@ -204,7 +204,7 @@ const store = createStore({
             paragraph: [
               {
                 t: "Software architecture design and fullstack programming in JS and Python",
-                c: "annotater.gif",
+                c: "annotater.mp4",
               },
             ],
           },
