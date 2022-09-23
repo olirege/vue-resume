@@ -11,11 +11,10 @@ const store = createStore({
         about: {
           t: "À propos",
           p: [
-            "Je suis un technologue passionné par la création de machines fonctionnelles.",
-            "Je suis un joueur d'équipe et je suis toujours prêt à aider mes collègues.",
-            "Je suis un travailleur acharné et toujours prêt à apprendre de nouvelles choses.",
-            "Je suis un penseur créatif et déterminer à résoudre les problèmes.",
-            "J'apprends vite et je suis toujours prêt à apprendre de nouvelles choses.",
+            "Il m'a toujours été plus facile de me fixer un objectif qui dépasse mon niveau de compétence et de plonger dans la zone de concentration pour obtenir de manière agressive ce qui doit être fait, fait.",
+            "J'acquiers les compétences dont j'ai besoin pour combler les lacunes pendant que je fais les choses plutôt que de m'en tenir seulement à ce que je sais.",
+            "Je suis un technologue dans l'âme avec une forte passion pour la création de machines belles et fonctionnelles.",
+            "Ce que je vais vous apporter, c'est une éthique de travail implacable, une passion pour l'apprentissage et un désir de créer le meilleur produit possible.",
           ],
         },
         homeTitle: "Techonologue en Génie Industriel",
@@ -166,14 +165,15 @@ const store = createStore({
         },
       },
       ENG: {
-        about: { t: "About", p: [
-        "I am a technologist with a passion for creating beautiful and functional machines.",
-        "I am a fast learner and I am always looking for new challenges.",
-        "I am a team player and I am always ready to help my colleagues.",
-        "I am a hard worker and I am always ready to learn new things.",
-        "I am a problem solver and I am always ready to find solutions.",
-        "I am a creative thinker and I am always ready to find new ways to solve problems.",
-        ] },
+        about: {
+          t: "About",
+          p: [
+            "It's always been easier for me to set a goal for myself that's outside my skill level and dive into the focus zone to aggressively get what needs to be done, done.",
+            "I get the skills I need to fill in the missing pieces while I do things rather than sticking to what I know.",
+            "I am a technologist at heart with a strong passion for creating beautiful and functional machines.",
+            "What I will bring to you is a relentless work ethic, a passion for learning, and a desire to create the best possible product.",
+          ],
+        },
         homeTitle: "Industrial Engineering Technologist",
         workTitle: " Recent Experience",
         work: {
