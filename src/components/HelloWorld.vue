@@ -64,7 +64,7 @@ export default {
     const text = computed(() => store.getters["getText"]);
     const msg = "Olivier R. Côté";
     const cell = "+1(438)-827-3126";
-    const email = "olirc1989@hotmail.com";
+    const email = "oliver@olivercote.com";
     const linkedin = {name: "LinkedIn Profile", url: "https://www.linkedin.com/in/olivier-r%C3%A9gimbal-41021a231/"}
     const github = {name: "Github Profile", url: "https://github.com/olirege/vue-resume"}
 
